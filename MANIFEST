@@ -3,4 +3,6 @@ Makefile.PL
 DiabetesPilot.pm
 README
 test.pl
-diabetes-report
+diabetes-report                          ColdSync conduit
+ChangeLog
+META.yml                                 Module meta-data (added by MakeMaker)

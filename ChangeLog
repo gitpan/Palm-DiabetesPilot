@@ -1,0 +1,84 @@
+2004-03-02 19:23  cpb
+
+	* MANIFEST: added Changelog to dist
+
+2004-03-02 19:21  cpb
+
+	* MANIFEST: added META
+
+2004-03-02 19:02  cpb
+
+	* DiabetesPilot.pm: warnings reported by "Peter L. Berghold"
+	<pberghol@berghold.net> - my $data overrides existing variable -
+	chomp $rec{'exer'} should be $rec{'exercise'}
+
+2004-02-04 19:36  cpb
+
+	* DiabetesPilot.pm, test.pl: - added Palm::PDB to main module -
+	make test should work without a database, although it won't do
+	anything
+
+2004-02-04 19:34  cpb
+
+	* Makefile.PL: added Palm::PDB as dependency
+
+2004-01-24 20:29  cpb
+
+	* DiabetesPilot.pm, Makefile.PL, README: add full name
+
+2004-01-24 20:27  cpb
+
+	* DiabetesPilot.pm, Makefile.PL, README: changed e-mail to CPAN
+	address
+
+2004-01-24 20:23  cpb
+
+	* Makefile.PL: add contact info, auto extract version
+
+2004-01-24 20:22  cpb
+
+	* README: add warnings
+
+2004-01-24 20:16  cpb
+
+	* MANIFEST, README, diabetes-report: expanded readme, moved over
+	diabetes-report
+
+2003-12-06 14:57  cpb
+
+	* DiabetesPilot.pm: fix comment
+
+2003-12-06 14:35  cpb
+
+	* README: added license
+
+2003-11-15 12:47  cpb
+
+	* DiabetesPilot.pm: fixed x outside of string bug
+
+2003-11-14 23:22  cpb
+
+	* Diabetes.pm, DiabetesPilot.pm, MANIFEST, Makefile.PL, README,
+	test.pl: - doc fixes, twiddling - rename to Palm::DiabetesPilot
+
+2003-11-07 20:17  cpb
+
+	* Diabetes.pm, MANIFEST, Palm/Diabetes.pm: moved up
+
+2003-11-07 20:13  cpb
+
+	* MANIFEST, Palm/Diabetes.pm: added manifest to manifest
+
+2003-11-06 22:54  cpb
+
+	* MANIFEST, Makefile.PL, test.pl, Palm/Diabetes.pm: building,
+	working, etc
+
+2003-11-06 19:06  cpb
+
+	* README: Added README
+
+2003-11-06 19:06  cpb
+
+	* MANIFEST, Palm/Diabetes.pm: first cut
+

@@ -4,7 +4,7 @@
 #
 # Copyright (C) 2003 Christophe Beauregard
 #
-# $Id: DiabetesPilot.pm,v 1.6 2004/02/05 00:36:30 cpb Exp $
+# $Id: DiabetesPilot.pm,v 1.7 2004/03/03 00:02:31 cpb Exp $
 
 use strict;
 
@@ -15,7 +15,7 @@ use Palm::Raw();
 use Palm::StdAppInfo();
 use vars qw( $VERSION @ISA );
 
-$VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @ISA = qw( Palm::StdAppInfo Palm::Raw );
 
@@ -141,9 +141,9 @@ sub ParseRecord
 	$record{'note'} = $note if $note ne "";
 
 	# type-specific structures seem to be appended, word aligned, right after
-	# the note ends.
+	# the note ends. We've already extracted what we need from $data.
 	my $nl = length($note)+1;
-	my $data = substr( $data, $nl + $nl % 2 );
+	$data = substr( $data, $nl + $nl % 2 );
 
 	# type is a bitmask.
 	if( $type & 0x1 ) {
@@ -216,7 +216,7 @@ sub ParseRecord
 		$record{'type'} = 'med';
 	} elsif( $type & 0x8 ) {
 		$record{'exercise'} = substr( $data, 2, unpack( "n", $data )-1 );
-		chomp( $record{'exer'} );
+		chomp( $record{'exercise'} );
 
 		$record{'type'} = 'exer';
 	} elsif( $type & 0x10 ) {
