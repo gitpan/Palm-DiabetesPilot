@@ -4,17 +4,18 @@
 #
 # Copyright (C) 2003 Christophe Beauregard
 #
-# $Id: DiabetesPilot.pm,v 1.5 2004/01/25 01:29:31 cpb Exp $
+# $Id: DiabetesPilot.pm,v 1.6 2004/02/05 00:36:30 cpb Exp $
 
 use strict;
 
 package Palm::DiabetesPilot;
 
+use Palm::PDB;
 use Palm::Raw();
 use Palm::StdAppInfo();
 use vars qw( $VERSION @ISA );
 
-$VERSION = do { my @r = (q$Revision: 1.5 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @ISA = qw( Palm::StdAppInfo Palm::Raw );
 

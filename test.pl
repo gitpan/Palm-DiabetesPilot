@@ -22,7 +22,7 @@ use Palm::PDB;
 
 my $pdb = new Palm::PDB;
 
-die "No database" unless -f "$ENV{HOME}/.palm/backup/Diabetes Pilot Data.pdb";
+exit 0 unless -f "$ENV{HOME}/.palm/backup/Diabetes Pilot Data.pdb";
 
 $pdb->Load( "$ENV{HOME}/.palm/backup/Diabetes Pilot Data.pdb" );
 

@@ -7,4 +7,7 @@ WriteMakefile(
 	'INSTALLDIRS'       => 'site',
 	'AUTHOR' => 'Christophe Beauregard <cpb@cpan.org>',
 	'ABSTRACT' => 'Module for processing Diabetes Pilot databases',
+	'PREREQ_PM' => {
+		'Palm::PDB' => '1',
+	},
 );
