@@ -9,5 +9,7 @@ WriteMakefile(
 	'ABSTRACT' => 'Module for processing Diabetes Pilot databases',
 	'PREREQ_PM' => {
 		'Palm::PDB' => '1',
+		'Test::More' => 0.46,
 	},
+	'EXE_FILES' => [ 'diabetes-report' ],
 );

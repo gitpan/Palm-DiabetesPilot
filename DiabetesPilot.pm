@@ -4,7 +4,7 @@
 #
 # Copyright (C) 2003 Christophe Beauregard
 #
-# $Id: DiabetesPilot.pm,v 1.7 2004/03/03 00:02:31 cpb Exp $
+# $Id: DiabetesPilot.pm,v 1.8 2004/09/08 23:23:00 cpb Exp $
 
 use strict;
 
@@ -15,7 +15,7 @@ use Palm::Raw();
 use Palm::StdAppInfo();
 use vars qw( $VERSION @ISA );
 
-$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @ISA = qw( Palm::StdAppInfo Palm::Raw );
 
@@ -120,6 +120,9 @@ sub ParseRecord
 {
 	my $self = shift;
 	my %record = @_;
+
+	# catch empty records
+	return \%record unless length $record{'data'} >= 20;
 
 	my ($sec,$min,$hour,$day,$mon,$year,$type,$quantity,$data)
 		= unpack( "nnnnnn x2 C x3 n a*", $record{'data'} );
