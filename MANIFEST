@@ -1,0 +1,6 @@
+MANIFEST
+Makefile.PL
+DiabetesPilot.pm
+README
+test.pl
+diabetes-report
